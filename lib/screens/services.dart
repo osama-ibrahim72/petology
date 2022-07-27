@@ -10,6 +10,7 @@ class services extends StatefulWidget {
 
 class _servicesState extends State<services> {
   var size, height, width;
+
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -21,9 +22,18 @@ class _servicesState extends State<services> {
         height: height,
         child: ListView(
           children: [
-            topBar(width: width, height: height, aboutBool: false, categoriesBool: false, servicesBool: true, requestBool: false, context: context,signInChoosen: false,loginChoosen: false),
+            topBar(
+                width: width,
+                height: height,
+                aboutBool: false,
+                categoriesBool: false,
+                servicesBool: true,
+                requestBool: false,
+                context: context,
+                signInChoosen: false,
+                loginChoosen: false),
             Container(
-              height: height/4,
+              height: height / 4,
               width: width,
               decoration: BoxDecoration(color: Colors.white),
             )

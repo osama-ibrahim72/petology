@@ -294,9 +294,7 @@ class _requestState extends State<request> {
                                 labelStyle: const TextStyle(
                                     fontSize: 20, color: Color(0xFFA69994)),
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(30)
-                                )
-                            ),
+                                    borderRadius: BorderRadius.circular(30))),
                           ),
                         ),
                         SizedBox(
@@ -311,7 +309,7 @@ class _requestState extends State<request> {
                             },
                             controller: hairController,
                             style:
-                            const TextStyle(color: Colors.black, shadows: [
+                                const TextStyle(color: Colors.black, shadows: [
                               Shadow(color: Colors.grey, blurRadius: 3),
                             ]),
                             decoration: InputDecoration(
@@ -324,9 +322,7 @@ class _requestState extends State<request> {
                                 labelStyle: const TextStyle(
                                     fontSize: 20, color: Color(0xFFA69994)),
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(30)
-                                )
-                            ),
+                                    borderRadius: BorderRadius.circular(30))),
                           ),
                         ),
                         SizedBox(
@@ -341,7 +337,7 @@ class _requestState extends State<request> {
                             },
                             controller: hairController,
                             style:
-                            const TextStyle(color: Colors.black, shadows: [
+                                const TextStyle(color: Colors.black, shadows: [
                               Shadow(color: Colors.grey, blurRadius: 3),
                             ]),
                             decoration: InputDecoration(
@@ -354,9 +350,7 @@ class _requestState extends State<request> {
                                 labelStyle: const TextStyle(
                                     fontSize: 20, color: Color(0xFFA69994)),
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(30)
-                                )
-                            ),
+                                    borderRadius: BorderRadius.circular(30))),
                           ),
                         ),
                         SizedBox(
@@ -371,7 +365,7 @@ class _requestState extends State<request> {
                             },
                             controller: hairController,
                             style:
-                            const TextStyle(color: Colors.black, shadows: [
+                                const TextStyle(color: Colors.black, shadows: [
                               Shadow(color: Colors.grey, blurRadius: 3),
                             ]),
                             decoration: InputDecoration(
@@ -384,9 +378,7 @@ class _requestState extends State<request> {
                                 labelStyle: const TextStyle(
                                     fontSize: 20, color: Color(0xFFA69994)),
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(30)
-                                )
-                            ),
+                                    borderRadius: BorderRadius.circular(30))),
                           ),
                         ),
                         SizedBox(
@@ -401,7 +393,7 @@ class _requestState extends State<request> {
                             },
                             controller: hairController,
                             style:
-                            const TextStyle(color: Colors.black, shadows: [
+                                const TextStyle(color: Colors.black, shadows: [
                               Shadow(color: Colors.grey, blurRadius: 3),
                             ]),
                             decoration: InputDecoration(
@@ -414,16 +406,12 @@ class _requestState extends State<request> {
                                 labelStyle: const TextStyle(
                                     fontSize: 20, color: Color(0xFFA69994)),
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(30)
-                                )
-                            ),
+                                    borderRadius: BorderRadius.circular(30))),
                           ),
                         ),
                         SizedBox(
                           height: 20,
                         ),
-
-
                       ],
                     ),
                   ),
@@ -433,7 +421,6 @@ class _requestState extends State<request> {
             SizedBox(
               height: 20,
             ),
-
             footer(width: width, height: height)
           ],
         ),

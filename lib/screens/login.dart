@@ -42,7 +42,7 @@ class _loginState extends State<login> {
                 signInChoosen: false,
                 loginChoosen: true),
             Container(
-              height: height*1.2,
+              height: height * 1.2,
               width: width,
               decoration: BoxDecoration(color: Colors.white),
               child: Column(
@@ -51,12 +51,14 @@ class _loginState extends State<login> {
                     children: [
                       Column(
                         children: [
-                          SizedBox(height: height*0.4,),
+                          SizedBox(
+                            height: height * 0.4,
+                          ),
                           Column(
                             children: [
                               Container(
                                 child: Container(
-                                  height: height*0.7,
+                                  height: height * 0.7,
                                   width: width / 2,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
@@ -69,7 +71,7 @@ class _loginState extends State<login> {
                                       ),
                                       Text(
                                         ""
-                                            "Login",
+                                        "Login",
                                         style: TextStyle(
                                             color: Color(0xFF593C30),
                                             fontSize: 25,
@@ -81,7 +83,8 @@ class _loginState extends State<login> {
                                       Padding(
                                         padding: const EdgeInsets.all(15),
                                         child: Material(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           elevation: 20,
                                           shadowColor: Colors.grey,
                                           child: TextField(
@@ -105,7 +108,8 @@ class _loginState extends State<login> {
                                                     color: Color(0xFFA69994)),
                                                 border: OutlineInputBorder(
                                                     borderRadius:
-                                                    BorderRadius.circular(10))),
+                                                        BorderRadius.circular(
+                                                            10))),
                                             keyboardType: TextInputType.name,
                                           ),
                                         ),
@@ -113,12 +117,14 @@ class _loginState extends State<login> {
                                       Padding(
                                         padding: const EdgeInsets.all(15),
                                         child: Material(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           elevation: 20,
                                           shadowColor: Colors.grey,
                                           child: TextField(
                                             onChanged: (g) {
-                                              password = passwordController.text;
+                                              password =
+                                                  passwordController.text;
                                             },
                                             controller: passwordController,
                                             style: const TextStyle(
@@ -137,7 +143,8 @@ class _loginState extends State<login> {
                                                     color: Color(0xFFA69994)),
                                                 border: OutlineInputBorder(
                                                     borderRadius:
-                                                    BorderRadius.circular(10))),
+                                                        BorderRadius.circular(
+                                                            10))),
                                             keyboardType: TextInputType.name,
                                           ),
                                         ),
@@ -149,23 +156,28 @@ class _loginState extends State<login> {
                                           decoration: BoxDecoration(
                                               color: Color(0xFF492F24),
                                               borderRadius:
-                                              BorderRadius.circular(10)),
+                                                  BorderRadius.circular(10)),
                                           child: Center(
                                               child: Text("Login",
                                                   style: TextStyle(
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                       fontSize: 20))),
                                         ),
-                                        onTap: (){
+                                        onTap: () {
                                           setState(() {
-                                            futureLogIN = AuthenticationController().getLogIn(email,password);
+                                            futureLogIN =
+                                                AuthenticationController()
+                                                    .getLogIn(email, password);
                                           });
                                         },
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(10.0),
-                                        child: Row(mainAxisAlignment: MainAxisAlignment.end,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
                                           children: [
                                             Text(
                                               "Forget Password ?",
@@ -179,7 +191,7 @@ class _loginState extends State<login> {
                                       ),
                                       Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                            MainAxisAlignment.spaceEvenly,
                                         children: [
                                           Container(
                                             child: Row(
@@ -199,7 +211,8 @@ class _loginState extends State<login> {
                                                   "Facebook",
                                                   style: TextStyle(
                                                       color: Colors.white,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                       fontSize: 18),
                                                 )
                                               ],
@@ -209,7 +222,7 @@ class _loginState extends State<login> {
                                             decoration: BoxDecoration(
                                                 color: Color(0xFF2F4582),
                                                 borderRadius:
-                                                BorderRadius.circular(16)),
+                                                    BorderRadius.circular(16)),
                                           ),
                                           Container(
                                             child: Row(
@@ -229,7 +242,8 @@ class _loginState extends State<login> {
                                                   "Google",
                                                   style: TextStyle(
                                                       color: Colors.black,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                       fontSize: 18),
                                                 )
                                               ],
@@ -241,7 +255,7 @@ class _loginState extends State<login> {
                                                     color: Color(0xFF707070),
                                                     width: 1),
                                                 borderRadius:
-                                                BorderRadius.circular(16)),
+                                                    BorderRadius.circular(16)),
                                           )
                                         ],
                                       ),
@@ -249,7 +263,8 @@ class _loginState extends State<login> {
                                         height: 20,
                                       ),
                                       Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(5.0),
@@ -274,7 +289,9 @@ class _loginState extends State<login> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(10.0),
-                                        child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
                                             Text(
                                               "Don't have an account ? ",
@@ -299,12 +316,18 @@ class _loginState extends State<login> {
                               ),
                             ],
                           ),
-                          SizedBox(height: height*0.1,),
+                          SizedBox(
+                            height: height * 0.1,
+                          ),
                         ],
                       ),
                       Container(
-                        child: Image.asset("assets/dogLodin.png",width: width/5,),
-                        margin: EdgeInsets.only(left: width/7,top: height/17),
+                        child: Image.asset(
+                          "assets/dogLodin.png",
+                          width: width / 5,
+                        ),
+                        margin:
+                            EdgeInsets.only(left: width / 7, top: height / 17),
                       )
                     ],
                   ),

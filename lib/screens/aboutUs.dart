@@ -18,17 +18,16 @@ class _aboutUsState extends State<aboutUs> {
   int kind = 0; //1=dog,2=cat
   late Future<FirstSction> futureFirstSection;
   late Future<SecondSection> futureSecondSection;
+
   @override
   void initState() {
     super.initState();
     futureFirstSection = StaticController().getFirstSction();
     futureSecondSection = StaticController().getSecondSction();
-
-
   }
+
   @override
   Widget build(BuildContext context) {
-
     size = MediaQuery.of(context).size;
     height = size.height;
     width = size.width;
@@ -84,13 +83,13 @@ class _aboutUsState extends State<aboutUs> {
                             FutureBuilder<FirstSction>(
                                 future: futureFirstSection,
                                 builder: (context, snapshot) {
-                                  if(snapshot.hasData){
-                                    return Text(snapshot.data!.title, style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.bold));
-                                  }
-                                  else{
+                                  if (snapshot.hasData) {
+                                    return Text(snapshot.data!.title,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold));
+                                  } else {
                                     return Text("error");
                                   }
                                   return const CircularProgressIndicator();
@@ -98,22 +97,25 @@ class _aboutUsState extends State<aboutUs> {
                             FutureBuilder<FirstSction>(
                                 future: futureFirstSection,
                                 builder: (context, snapshot) {
-                                  if(snapshot.hasData){
+                                  if (snapshot.hasData) {
                                     return Padding(
                                       padding: const EdgeInsets.all(10.0),
-                                      child: Container(width: width*0.4,
-                                        child: Text(snapshot.data!.body,maxLines: 4, style: TextStyle(
-                                            color: Colors.white, fontSize: 15,overflow: TextOverflow.ellipsis,)),
+                                      child: Container(
+                                        width: width * 0.4,
+                                        child: Text(snapshot.data!.body,
+                                            maxLines: 4,
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                              overflow: TextOverflow.ellipsis,
+                                            )),
                                       ),
                                     );
-                                  }
-                                  else{
+                                  } else {
                                     return Text("error");
                                   }
                                   return const CircularProgressIndicator();
                                 }),
-
-
                             GestureDetector(
                                 onTap: () {},
                                 child: Container(
@@ -202,17 +204,13 @@ class _aboutUsState extends State<aboutUs> {
                               FutureBuilder<SecondSection>(
                                   future: futureSecondSection,
                                   builder: (context, snapshot) {
-                                    if(snapshot.hasData){
-                                      return
-                                           Text(snapshot.data!.title,style: TextStyle(
+                                    if (snapshot.hasData) {
+                                      return Text(snapshot.data!.title,
+                                          style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 25,
-                                              fontWeight: FontWeight.bold)
-                                          );
-
-
-                                    }
-                                    else{
+                                              fontWeight: FontWeight.bold));
+                                    } else {
                                       return Text("error");
                                     }
                                     return const CircularProgressIndicator();
@@ -220,17 +218,21 @@ class _aboutUsState extends State<aboutUs> {
                               FutureBuilder<SecondSection>(
                                   future: futureSecondSection,
                                   builder: (context, snapshot) {
-                                    if(snapshot.hasData){
+                                    if (snapshot.hasData) {
                                       return Padding(
                                         padding: const EdgeInsets.all(10.0),
-                                        child: Container(width: width*0.4,
-                                          child: Text(snapshot.data!.body,maxLines: 8,  style: TextStyle(
-                                              color: Color(0xFF585858), fontSize: 18),
-                                      ),
+                                        child: Container(
+                                          width: width * 0.4,
+                                          child: Text(
+                                            snapshot.data!.body,
+                                            maxLines: 8,
+                                            style: TextStyle(
+                                                color: Color(0xFF585858),
+                                                fontSize: 18),
+                                          ),
                                         ),
                                       );
-                                    }
-                                    else{
+                                    } else {
                                       return Text("error");
                                     }
                                     return const CircularProgressIndicator();
@@ -369,25 +371,45 @@ class _aboutUsState extends State<aboutUs> {
             ),
             Container(
               width: width,
-              height: height/2,
+              height: height / 2,
               child: Column(
                 children: [
-                  Text("Our frinds who",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22,)),
-                  Text("Looking for a house",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22,)),
+                  Text("Our frinds who",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                      )),
+                  Text("Looking for a house",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                      )),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(width: width/2,
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [
-                        dogCart(height: height,width: width,),
-                        dogCart(height: height,width: width,),
-                        dogCart(height: height,width: width,),
-                      ],),
+                    child: Container(
+                      width: width / 2,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          dogCart(
+                            height: height,
+                            width: width,
+                          ),
+                          dogCart(
+                            height: height,
+                            width: width,
+                          ),
+                          dogCart(
+                            height: height,
+                            width: width,
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
               ),
             ),
-
             footer(width: width, height: height),
           ],
         ),

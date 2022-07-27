@@ -16,6 +16,7 @@ class topBar extends StatefulWidget {
   final bool requestBool;
   final BuildContext context;
   final bool signInChoosen, loginChoosen;
+
   const topBar(
       {Key? key,
       required this.width,

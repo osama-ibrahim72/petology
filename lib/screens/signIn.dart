@@ -13,7 +13,7 @@ class signIn extends StatefulWidget {
 
 class _signInState extends State<signIn> {
   var size, height, width;
-  var firstName, lastName, email, password, rePassword,country,phone;
+  var firstName, lastName, email, password, rePassword, country, phone;
   final firstNameController = TextEditingController();
   final lastNameController = TextEditingController();
   final emailController = TextEditingController();
@@ -21,6 +21,7 @@ class _signInState extends State<signIn> {
   final rePasswordController = TextEditingController();
   final countryController = TextEditingController();
   late Future<Register> futureRegister;
+
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -70,7 +71,7 @@ class _signInState extends State<signIn> {
                         children: [
                           Center(
                             child: Container(
-                              height: height*1.1,
+                              height: height * 1.1,
                               width: width / 2,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -355,8 +356,7 @@ class _signInState extends State<signIn> {
                                       shadowColor: Colors.grey,
                                       child: TextField(
                                         onChanged: (g) {
-                                          country =
-                                              countryController.text;
+                                          country = countryController.text;
                                         },
                                         controller: countryController,
                                         style: const TextStyle(
@@ -375,7 +375,7 @@ class _signInState extends State<signIn> {
                                                 color: Color(0xFFA69994)),
                                             border: OutlineInputBorder(
                                                 borderRadius:
-                                                BorderRadius.circular(10))),
+                                                    BorderRadius.circular(10))),
                                         keyboardType: TextInputType.name,
                                       ),
                                     ),
@@ -395,15 +395,25 @@ class _signInState extends State<signIn> {
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 20))),
                                     ),
-                                    onTap: (){
+                                    onTap: () {
                                       setState(() {
-                                        futureRegister = AuthenticationController().getRegister(email,password,firstName,lastName,phone,country);
+                                        futureRegister =
+                                            AuthenticationController()
+                                                .getRegister(
+                                                    email,
+                                                    password,
+                                                    firstName,
+                                                    lastName,
+                                                    phone,
+                                                    country);
                                       });
                                     },
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.all(10.0),
-                                    child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           "Already have an account ? ",
